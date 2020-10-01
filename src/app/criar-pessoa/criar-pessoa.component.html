@@ -19,9 +19,9 @@
           <label for="nome" class="required">
             Nome
           </label>
-          <input type="text" formControlName="nome" name="nome" id="nome" class="form-control" required placeholder="Fulano de Tal" />
+          <input type="text" formControlName="nome" name="nome" id="nome" class="form-control" maxlength="10" required placeholder="Fulano de Tal" />
           <div class="alert alert-danger" *ngIf="!f.nome.valid">
-            Preencha corretamente o nome (min.: 3 dígitos).
+            Preencha corretamente o nome (min.: 3 dígitos; max.: 10 dígitos).
           </div>
         </div>
         <div class="col-sm-5 form-group">

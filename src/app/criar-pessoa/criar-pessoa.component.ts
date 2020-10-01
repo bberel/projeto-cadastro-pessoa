@@ -19,7 +19,7 @@ export class CriarPessoaComponent implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      nome: ['', [Validators.required, Validators.minLength(3)]],
+      nome: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(10)]],
       idade: ['', [Validators.required, Validators.min(18), Validators.max(100)]],
       email: ['', [Validators.required, Validators.email]],
       /* consultado: https://stackoverflow.com/questions/1221985/how-to-validate-a-user-name-with-regex */
